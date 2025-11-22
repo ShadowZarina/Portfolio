@@ -1,1 +1,205 @@
+/* Color Palette: 
+    #f5eee7 (Light Sand/Background) 
+    #ccbb9d (Warm Tan/Accent) 
+    #1e1c18 (Dark Text/Footer) 
+    #d5dae6 (Light Blue-Grey) 
+    #c1cfda (Mid Blue)
+    #adc1d1 (Main Ocean Blue) 
+*/
+
+/* --- GLOBAL STYLES --- */
+/* Import custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+:root {
+    --color-sand: #f5eee7;
+    --color-ocean-dark: #adc1d1; /* Main Blue */
+    --color-ocean-medium: #c1cfda; /* Mid Blue */
+    --color-ocean-light: #d5dae6; /* Light Blue-Grey */
+    --color-accent-tan: #ccbb9d;
+    --color-dark-text: #1e1c18;
+
+    --font-gambetta: 'Gambetta', serif; /* Use fallback if local font isn't set */
+    --font-manrope: 'Manrope', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-manrope);
+    color: var(--color-dark-text);
+    background-color: var(--color-sand); /* Light Sand/Beach Background */
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-gambetta);
+    color: var(--color-ocean-dark);
+    margin-bottom: 0.5em;
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
+
+p { margin-bottom: 1em; }
+
+a {
+    color: var(--color-ocean-dark);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-accent-tan);
+}
+
+/* --- HEADER & NAVIGATION --- */
+header {
+    background-color: var(--color-ocean-dark); /* Main Ocean Blue */
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+    color: var(--color-sand);
+    font-size: 1.8em;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: var(--color-ocean-light);
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 20px; /* Round elements */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: var(--color-sand);
+    color: var(--color-ocean-dark);
+}
+
+/* --- MAIN CONTENT LAYOUT --- */
+main {
+    padding: 40px 5%;
+    min-height: 70vh;
+}
+
+.section-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* --- ROUND ELEMENTS / CIRCLES --- */
+.circle-photo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; /* Perfect Circle */
+    background-color: var(--color-ocean-medium); /* Placeholder for photo */
+    border: 5px solid var(--color-accent-tan);
+    margin: 0 auto 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: var(--color-dark-text); /* Placeholder text color */
+    font-style: italic;
+}
+
+/* --- WAVE/SHAPE DIVIDER EXAMPLE --- */
+.wave-divider {
+    height: 50px;
+    background: linear-gradient(to bottom, var(--color-ocean-light), var(--color-sand));
+    border-radius: 0 0 50% 50% / 0 0 100px 100px; /* Rounded wave effect */
+}
+
+
+/* --- FOOTER (Dark Sand/Shell color) --- */
+footer {
+    background-color: var(--color-dark-text);
+    color: var(--color-ocean-light);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+/* Home Page layout styles */
+.hero-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intro-content {
+    max-width: 500px;
+}
+
+.photo-area {
+    text-align: center;
+}
+
+.caption {
+    font-style: italic;
+    color: var(--color-accent-tan);
+}
+
+/* Specific styles for Portfolio pages (Art & Coding) */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding-top: 30px;
+}
+
+.portfolio-item, .project-item {
+    background-color: var(--color-ocean-light);
+    border-radius: 15px; /* Round elements */
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.item-visual {
+    height: 200px;
+    background-color: var(--color-ocean-medium);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-dark-text);
+    font-style: italic;
+}
+
+/* Coding page button */
+.button {
+    display: inline-block;
+    background-color: var(--color-accent-tan);
+    color: var(--color-dark-text);
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: 700;
+}
 
